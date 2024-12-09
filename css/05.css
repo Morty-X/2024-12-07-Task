@@ -389,15 +389,69 @@ a {
     text-align: center;
     line-height: 40px;
     background-color: #333333;
+    cursor: pointer;
 }
 
 .teamListItem .curBtn {
     background-color: #3178b4;
 }
 
-/*  */
+/* footer模块 */
 .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 325px;
+    padding-top: 50px;
     background-color: #1e1e1e;
+    cursor: pointer;
+}
+
+.footerTop {
+    display: flex;
+    padding-left: 14px;
+    color: #fff;
+}
+
+.footerTop dl {
+    padding: 0 35px;
+    border-right: 1px solid #666;
+}
+
+.footerTop dl dt {
+    margin-bottom: 20px;
+}
+
+.footerTop dd a {
+    color: #666;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.footerTop .contact {
+    border: none;
+}
+
+.contact dd {
+    font-size: 13px;
+    line-height: 28px;
+    color: #666;
+}
+
+.contact .phone {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: #666;
 }
