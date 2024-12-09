@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+</head>
+
+<body>
+    3.实现2进制字符串转10进制数的函数
+    <script>
+        function base2ToBase10(str) {
+            let res = 0
+            for (let i = 0; i < str.length; i++) {
+                let temp = parseInt(str.slice(i, i + 1))
+                res += temp * Math.pow(2, str.length - 1 - i)
+            }
+            return res
+        }
+        let str = '100101101011010000111'
+        base2ToBase10(str)
+    </script>
+</body>
+
+</html>

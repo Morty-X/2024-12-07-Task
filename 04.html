@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  4.实现HTML字符串标签解析为对象
+  <!-- <img class="foo bar" id="baz" src="abc.png" style="background-color: red;" alt="一张美丽的图片"> -->
+  <script>
+    /**
+     * 题目：给定一个字符串，将它转换为对象的格式
+     * 例如：
+     */
+    /* let str =
+      ' <img class="foo bar" id="baz" src="abc.png" style="background-color: red;" alt="一张美丽的图片">';
+    //=> 转换为以下形式
+    let obj = {
+      tagName: "img",
+      attrs: {
+        className: "foo bar",
+        id: "baz",
+        src: "abc.png",
+        style: "background-color: red;",
+        alt: "一张美丽的图片",
+      },
+    }; */
+
+    /**
+     *
+     * @param {需要格式化的字符串} str
+     * tip: 正则表达式  反向引用
+     */
+    let str =
+      "<img class='foo bar' id='baz' src=' abc.png' style='background-color: red; ' alt='一张美丽的图片'> </img>";
+    function formatStr(str) {
+      let obj = {}
+      let reg1 = /(?<=<\/)[^>]+/g
+      let reg2 = /\b[a-z]+(?=\=)/g;
+      let reg3 = /(?!')[^=]*(?=')/g
+      obj.tagName = str.match(reg1).join('')
+
+      obj.attrs = {}
+      let arr1 = str.match(reg2)
+      let arr2 = str.match(reg3)
+      for (let i = 0; i < arr1.length; i++) {
+        obj.attrs[arr1[i]] = arr2[i].trim()
+      }
+      return obj
+    }
+    console.log(formatStr(str));
+
+    let reg = /(?<=<\/).*(?=>)/g
+    // 1.获得 tagName的值 即 img
+    let reg1 = /(?<=<\/)[^>]+/g
+    // 2.获得属性名的正则表达式
+    let reg2 = /\b[a-z]+(?=\=)/g;
+    // 3.获得属性值的正则表达式
+    // 匹配是两个 ' 中间的内容
+    let reg3 = /(?!')[^=]*(?=')/g
+    /*
+        let regex = /((?<=<\/)[^>]+)|(\b[a-z]+(?=\=))|((?!')[^=]*(?='))/g
+        console.log(str.match(reg));
+        console.log(str.match(reg1));
+        console.log(str.match(reg2));
+        console.log(str.match(reg3));
+        console.log(str.match(regex)); */
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

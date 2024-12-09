@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 板心 */
+.w {
+    margin: auto;
+    width: 1220px;
+}
+
+/* header 头部部分 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 114px;
+}
+
+.logo {
+    width: 350px;
+    height: 47px;
+    background-color: pink;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.headerList a {
+    margin-left: 32px;
+}
+
+.current {
+    color: #005ba8;
+}
+
+/* banner部分 */
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 499px;
+    background: url(/images/contact_banner.jpg) no-repeat center;
+    /* background-size: 100vw 499px; */
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutInfo {
+    width: 328px;
+}

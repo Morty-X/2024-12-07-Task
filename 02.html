@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+</head>
+
+<body>
+    2.实现10进制数转二进制字符串的函数
+    <script>
+        function base10ToBase2(num) {
+            let res = ''
+            while (num) {
+                res = num % 2 + res
+                num = Math.floor(num / 2)
+            }
+            return res
+        }
+        console.log(base10ToBase2(1234567));
+
+    </script>
+</body>
+
+</html>
