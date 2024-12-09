@@ -1,6 +1,7 @@
 * {
     margin: 0;
     list-style: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -163,8 +164,240 @@ a {
 
 /* 主要内容模块 */
 .main {
+    padding: 45px 0;
     background-color: #f1f1f1;
 }
 
 /* 办公环境展示 */
 .show {}
+
+.showTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.showTitle h2 {
+    height: 80px;
+    line-height: 80px;
+}
+
+.showTitle::after {
+    display: block;
+    content: '';
+    width: 90px;
+    height: 4px;
+    background-color: blue;
+}
+
+.showImages {
+    overflow: hidden;
+}
+
+.show-left {
+    float: left;
+    width: 599px;
+    height: 320px;
+    background: url(/images/huanjing1.jpg) no-repeat center;
+    background-size: cover;
+    margin: 0 14px 7px 0;
+}
+
+.showInfo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(28, 107, 174, 0.8);
+}
+
+.show-right {
+    overflow: hidden;
+}
+
+.show-right-item {
+    position: relative;
+    float: left;
+    width: 288px;
+    height: 155px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.show-right-item p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(28, 107, 174, 0.8);
+}
+
+.show-right-item:nth-child(odd) {
+    margin-right: 5px;
+}
+
+.show-right-item1 {
+    background: url(/images/huangjing2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.show-right-item2 {
+    background: url(/images/huanjing3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.show-right-item3 {
+    background: url(/images/huanjing4.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.show-right-item4 {
+    background: url(/images/huanjing6.jpg) no-repeat center;
+    background-size: cover;
+}
+
+
+/*企业员工培训  */
+.train {
+    margin-top: 30px;
+}
+
+.trainTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.trainTitle h2 {
+    height: 55px;
+    line-height: 55px;
+}
+
+.trainTitle::after {
+    display: block;
+    content: '';
+    width: 90px;
+    height: 4px;
+    background-color: blue;
+}
+
+.trainInfo {
+    display: flex;
+}
+
+.trainInfoItem {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 400px;
+}
+
+.trainInfoItem:nth-child(even) {
+    flex-direction: column-reverse;
+}
+
+.trainInfoItem img {
+    flex: 1;
+    height: 200px;
+}
+
+.trainText {
+    flex: 1;
+    padding: 0 28px 0;
+    text-align: center;
+}
+
+.trainTop {
+    padding: 18px 0;
+    color: #3178b4;
+    font-weight: 700;
+}
+
+.trainDesc {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* 精英团队 */
+.team {
+    margin-top: 30px;
+}
+
+.teamTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.teamTitle h2 {
+    height: 55px;
+    line-height: 55px;
+}
+
+.teamTitle::after {
+    display: block;
+    content: '';
+    width: 90px;
+    height: 4px;
+    background-color: blue;
+}
+
+.teamList {
+    display: flex;
+}
+
+.teamListItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamListItem h3 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.teamListItem p {
+    margin: 14px 0;
+    color: #666;
+    font-size: 12px;
+}
+
+.teamListItem img {
+    width: 320px;
+    height: 340px;
+}
+
+
+.teamListItem button {
+    width: 180px;
+    height: 40px;
+    margin-top: 45px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background-color: #333333;
+}
+
+.teamListItem .curBtn {
+    background-color: #3178b4;
+}
+
+/*  */
+.footer {
+    width: 100%;
+    height: 325px;
+    background-color: #1e1e1e;
+}
